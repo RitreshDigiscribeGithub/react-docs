@@ -1,0 +1,87 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css");
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+}
+.side-panel {
+    height: calc(100vh - 64px);
+    background-color: #ecebeb;
+    display: flex;
+    align-items: center;
+}
+[data-ul] {
+    padding: 0px;
+    margin-left: 0px;
+}
+[data-ul] li {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+[data-ul]::before {
+    content: attr(data-ul);
+    text-decoration: underline;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    display: block;
+}
+[data-ul] li::before {
+    content: "-";
+}
+.cli {
+    background-color: #272822;
+    color: white;
+    padding: 10px 25px 10px 25px;
+    margin: 10px 0px 10px 0px;
+    display: inline-block;
+    border-radius: 0px;
+}
+.cli::before {
+    content: ">_\00a0";
+    font-weight: 700;
+    margin: 0px 10px 0px 0px;
+    color: #61dafb;
+}
+.app-container {
+    height: calc(100vh - 64px);
+    overflow-y: scroll;
+}
+.nav-link {
+    color: black;
+}
+.active-link {
+    color: blue;
+}
+.error {
+    color: red;
+    display: block;
+}
+label {
+    display: block;
+}
+input[type="text"] {
+    width: 100%;
+}
+.btn-group Button {
+    text-transform: unset !important;
+}
+.t-t-u-s {
+    text-transform: unset !important;
+}
