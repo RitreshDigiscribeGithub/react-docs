@@ -2,13 +2,16 @@ import React, { Component } from "react";
 import ReactCode from "../../../../components/ReactCode";
 
 export default function PropsInClass() {
-  return (
-    <>
-    <h1>props in class component</h1>
-     <ul data-ul="1 send data in another class component">
-         <li>we can send props many data type : string , array, object , function</li>
-      </ul>
-     <ReactCode file="App" dot="jsx" code={`
+    return (
+        <>
+            <h1>props in class component</h1>
+            <ul data-ul="1 send data in another class component">
+                <li>we can send props many data type : string , array, object , function</li>
+            </ul>
+            <ReactCode
+                file="App"
+                dot="jsx"
+                code={`
        import React from 'react'
        import Card from "./Card";
 
@@ -22,10 +25,13 @@ export default function PropsInClass() {
                </>
            )
        }
-      `} />
-      <ul data-ul="2 receiving data in class component using this.props">
-      </ul>
-       <ReactCode file="Card" dot="jsx" code={`
+      `}
+            />
+            <ul data-ul="2 receiving data in class component using this.props"></ul>
+            <ReactCode
+                file="Card"
+                dot="jsx"
+                code={`
        import React, { Component } from "react";
 
        export default class Card extends Component {
@@ -41,9 +47,8 @@ export default function PropsInClass() {
           );
         }
       }
-      `} />
-    </>
-  );
+      `}
+            />
+        </>
+    );
 }
-
-

@@ -12,6 +12,8 @@ import LifeCycleRuotes from "./life-cycle/LifeCycleRuotes";
 import HooksRoutes from "./hooks/HooksRoutes";
 import RefRoutes from "./Ref/RefRoutes";
 import RoutingRoutes from "./Routing/RoutingRoutes";
+import ApiRoutes from "./api/ApiRoutes";
+import PortalsRoutes from "./portals/PortalsRoutes";
 
 const docsRoutes = [
     {
@@ -77,6 +79,14 @@ const docsRoutes = [
                 name: "state in class component",
                 path: "state-in-class-component",
             },
+            {
+                name: "previous state",
+                path: "previous-state",
+            },
+            {
+                name: "previous state with object",
+                path: "previous-state-with-object",
+            },
         ],
     },
     {
@@ -95,6 +105,10 @@ const docsRoutes = [
             {
                 name: "props in class component",
                 path: "props-in-class-component",
+            },
+            {
+                name: "previous props",
+                path: "previous-props",
             },
         ],
     },
@@ -212,8 +226,18 @@ const docsRoutes = [
     {
         title: "fetch API",
         path: "fetch-api",
-        component: () => <p>fetch-api-root-page</p>,
-        list: [],
+        component: () => <ApiRoutes />,
+        list: [
+            { name: "what is api", path: "what-is-api" },
+            { name: "http curd", path: "http-curd" },
+            { name: "curd code", path: "curd-code" },
+        ],
+    },
+    {
+        title: "portals",
+        path: "portals",
+        component: () => <PortalsRoutes />,
+        list: [{ name: "what is portals", path: "what-is-portals" }],
     },
 ];
 //
