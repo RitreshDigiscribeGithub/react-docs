@@ -14,6 +14,8 @@ import RefRoutes from "./Ref/RefRoutes";
 import RoutingRoutes from "./Routing/RoutingRoutes";
 import ApiRoutes from "./api/ApiRoutes";
 import PortalsRoutes from "./portals/PortalsRoutes";
+import ContextApiRoutes from "./context-api/ContextApiRoutes";
+import ReduxRoutes from "./redux/ReduxRoutes";
 
 const docsRoutes = [
     {
@@ -110,6 +112,10 @@ const docsRoutes = [
                 name: "previous props",
                 path: "previous-props",
             },
+            {
+                name: "props composition",
+                path: "props-composition",
+            },
         ],
     },
     {
@@ -119,6 +125,7 @@ const docsRoutes = [
         list: [
             { name: "what is ref", path: "what-is-ref" },
             { name: "forwardRef", path: "forwardRef" },
+            { name: "useRef hook", path: "useRef-hook" },
         ],
     },
     {
@@ -208,7 +215,21 @@ const docsRoutes = [
             { name: "useState", path: "useState" },
             { name: "useEffect", path: "useEffect" },
             { name: "useMemo", path: "useMemo" },
+            { name: "useReducer", path: "useReducer" },
             { name: "useRef", path: "useRef" },
+            { name: "useContext", path: "useContext" },
+            { name: "custom hooks", path: "custom-hooks" },
+        ],
+    },
+    {
+        title: "Context API",
+        path: "context-api",
+        component: () => <ContextApiRoutes />,
+        list: [
+            { name: "props drilling", path: "props-drilling" },
+            { name: "what-is-context-api", path: "what-is-context-api" },
+            { name: "how to use context api", path: "how-to-use-context-api" },
+            { name: "useContext hook", path: "useContext-hook" },
         ],
     },
     //props & state
@@ -222,6 +243,7 @@ const docsRoutes = [
             { name: "dynamic routing", path: "dynamic-routing" },
             { name: "routing hooks", path: "routing-hooks" },
         ],
+        library: true,
     },
     {
         title: "fetch API",
@@ -238,6 +260,18 @@ const docsRoutes = [
         path: "portals",
         component: () => <PortalsRoutes />,
         list: [{ name: "what is portals", path: "what-is-portals" }],
+    },
+    {
+        title: "redux",
+        path: "redux",
+        component: () => <ReduxRoutes />,
+        list: [
+            { name: "introduction", path: "introduction" },
+            { name: "architecture", path: "architecture" },
+            { name: "Principles", path: "principles" },
+            { name: "redux set up", path: "redux-set-up" },
+        ],
+        library: true,
     },
 ];
 //

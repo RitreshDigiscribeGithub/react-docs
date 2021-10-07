@@ -4,6 +4,7 @@ import WhatIsProps from "./WhatIsProps";
 import PropsInFunction from "./PropsInFunction";
 import PropsInClass from "./PropsInClass";
 import PreviousProps from "./PreviousProps";
+import PropsComposition from "./PropsComposition";
 
 export default function PropsRoutes() {
     let { path } = useRouteMatch();
@@ -21,6 +22,9 @@ export default function PropsRoutes() {
             </Route>
             <Route exact path={`${path}/previous-props`}>
                 <PreviousProps />
+            </Route>
+            <Route exact path={`${path}/props-composition`}>
+                <PropsComposition />
             </Route>
         </>
     );
