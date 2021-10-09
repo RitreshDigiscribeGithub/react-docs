@@ -16,7 +16,7 @@ import ApiRoutes from "./api/ApiRoutes";
 import PortalsRoutes from "./portals/PortalsRoutes";
 import ContextApiRoutes from "./context-api/ContextApiRoutes";
 import ReduxRoutes from "./redux/ReduxRoutes";
-
+import FormikRoutes from "./Formik/FormikRoutes";
 const docsRoutes = [
     {
         title: "introduction and setup",
@@ -270,6 +270,18 @@ const docsRoutes = [
             { name: "architecture", path: "architecture" },
             { name: "Principles", path: "principles" },
             { name: "redux set up", path: "redux-set-up" },
+        ],
+        library: true,
+    },
+    {
+        title: "formik",
+        path: "formik",
+        component: () => <FormikRoutes />,
+        list: [
+            { name: "what is formik", path: "what-is-formik" },
+            { name: "basic form", path: "basic-form" },
+            { name: "form-validation", path: "form-validation" },
+            { name: "formik component", path: "formik-component" },
         ],
         library: true,
     },

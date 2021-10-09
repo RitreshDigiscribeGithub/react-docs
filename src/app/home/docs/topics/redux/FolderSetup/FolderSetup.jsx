@@ -37,7 +37,7 @@ export default function FolderSetup() {
                 index.js
                 <ul>
                     <li>
-                        src
+                        redux
                         <ol>
                             <li>
                                 actions
@@ -52,13 +52,18 @@ export default function FolderSetup() {
                                 store
                                 <StoreTree />
                             </li>
+                        </ol>
+                    </li>
+                    <li>
+                        src
+                        <ul>
                             <li>
                                 component
                                 <ul>
                                     <li>Main.jsx</li>
                                 </ul>
                             </li>
-                        </ol>
+                        </ul>
                     </li>
                 </ul>
             </li>

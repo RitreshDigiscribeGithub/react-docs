@@ -13,7 +13,7 @@ export default function ReduxSetUp() {
             {/* create to actions */}
             <ul data-ul="1 create to actions in"></ul>
             <ReactCode
-                file="actions/index"
+                file="redux/actions/index"
                 dot="js"
                 code={`
                 export const increaseCount = (data) => {
@@ -27,7 +27,7 @@ export default function ReduxSetUp() {
             {/* create to Reducers */}
             <ul data-ul="2 create to Reducer for actions"></ul>
             <ReactCode
-                file="counter-reducers/counter"
+                file="redux/reducers/counter-reducers/counter"
                 dot="js"
                 code={`
                 const initialState = 0;
@@ -48,7 +48,7 @@ export default function ReduxSetUp() {
             {/* create to Root Reducer */}
             <ul data-ul="3 create to Root Reducer for combine to all reducers"></ul>
             <ReactCode
-                file="reducers/index"
+                file="redux/reducers/index"
                 dot="js"
                 code={`
                 import counterReducers from "./counter-reducers/counter";
@@ -64,7 +64,7 @@ export default function ReduxSetUp() {
             {/* create to store */}
             <ul data-ul="4 create to a store"></ul>
             <ReactCode
-                file="store/store"
+                file="redux/store/store"
                 dot="js"
                 code={`
                 import rootReducer from "../reducers/index";
