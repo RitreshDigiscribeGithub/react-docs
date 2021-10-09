@@ -18,6 +18,10 @@ const validationSchema = yup.object({
 });
 
 export default function FormikComponent() {
+    const ErrorTemplete = (props) => {
+        return <div className="text-danger">{props.children}</div>;
+    };
+
     return (
         <>
             <ul data-ul="What is formik component">
@@ -55,17 +59,23 @@ export default function FormikComponent() {
             
             export default function FormikComponent() {
                 
+                const ErrorTemplete = (props) => {
+                    return <div className="text-danger">{props.children}</div>;
+                };
+
                 return (
                     <>
                       <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
                       <Form>
                           <p>
                             <Field type="text" name="username" />
-                            <ErrorMessage name="username" />
+                            <ErrorMessage name="username" 
+                            component={ErrorTemplete} />
                           </p>
                           <p>
                             <Field type="text" name="email" />
-                            <ErrorMessage name="email" />
+                            <ErrorMessage name="email" 
+                            component={ErrorTemplete}/>
                           </p>
                           <p>
                             <button type="submit">submit</button>
@@ -78,16 +88,15 @@ export default function FormikComponent() {
             `}
             />
 
-            
             <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
                 <Form>
                     <p>
                         <Field type="text" name="username" />
-                        <ErrorMessage name="username" />
+                        <ErrorMessage name="username" component={ErrorTemplete} />
                     </p>
                     <p>
                         <Field type="text" name="email" />
-                        <ErrorMessage name="email" />
+                        <ErrorMessage name="email" component={ErrorTemplete} />
                     </p>
                     <p>
                         <button type="submit">submit</button>

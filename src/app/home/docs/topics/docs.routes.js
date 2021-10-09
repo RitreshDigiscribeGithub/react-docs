@@ -280,8 +280,11 @@ const docsRoutes = [
         list: [
             { name: "what is formik", path: "what-is-formik" },
             { name: "basic form", path: "basic-form" },
-            { name: "form-validation", path: "form-validation" },
+            { name: "form validation", path: "form-validation" },
             { name: "formik component", path: "formik-component" },
+            { name: "nested objects", path: "nested-objects" },
+            { name: "field array component", path: "field-array-component" },
+            { name: "render props form", path: "render-props-form" },
         ],
         library: true,
     },

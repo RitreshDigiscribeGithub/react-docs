@@ -4,6 +4,9 @@ import WhatFormik from "./WhatFormik";
 import BasicForm from "./BasicForm";
 import FormValidation from "./FormValidation";
 import FormikComponent from "./FormikComponent";
+import NestedObjects from "./NestedObjects";
+import FieldArrayComponent from "./FieldArrayComponent";
+import RenderPropsForm from "./RenderPropsForm";
 
 export default function FormikRoutes() {
     let { path, url } = useRouteMatch();
@@ -21,6 +24,15 @@ export default function FormikRoutes() {
             </Route>
             <Route path={`${path}/formik-component`}>
                 <FormikComponent />
+            </Route>
+            <Route path={`${path}/nested-objects`}>
+                <NestedObjects />
+            </Route>
+            <Route path={`${path}/field-array-component`}>
+                <FieldArrayComponent />
+            </Route>
+            <Route path={`${path}/render-props-form`}>
+                <RenderPropsForm />
             </Route>
         </>
     );
